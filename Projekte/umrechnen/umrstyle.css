@@ -1,0 +1,282 @@
+body{
+    margin: 0;
+    background-image: url(back1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+    font-weight: bold;
+    color:darkcyan;
+}
+h2{
+    font-weight: bold;
+    color: lightblue;
+    font-size: 35px;
+    border-style: 2px solid gray;
+}
+#number{
+    width: 150px;
+    height: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    color: darkslategray;
+    border: #33ffbb 3px solid;
+}
+#sidebar{
+    list-style-type: none;
+    margin: 0;
+    padding-left: 25px;
+    padding-top: 10px;
+    width: 20%;
+    height: 100%;
+    border-right: black;
+    border-width: 8px;
+    position: fixed;
+}
+#logo{
+    margin-top: 10px;
+    margin-bottom: -13px;
+    width: 130px;
+    height: 130px;
+}
+#logo:hover{
+    transform:scale(1.4);
+}
+.aktiv{
+    color: rgb(137, 4, 79);
+}
+#btn {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 14px;
+    opacity: 80%;
+    margin-top: 5%;
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    background-image: 
+    linear-gradient(90deg,
+    #045991, #33ffbb);
+    color: black;
+    border: none;
+    cursor: pointer;
+    }
+#btn::before,
+#btn::after {
+    --size: calc(100% + 15px);
+    content: "";
+    position: absolute;
+    inset: 50% 0 0 50%;
+    translate: -50% -50%;
+    pointer-events: none;
+    transition: scale 0.35s;
+    }
+#btn::before {
+    width: var(--size);
+    height: 100%;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    scale: .25 1;
+    }
+#btn::after{
+    width: 100%;
+    height: var(--size);
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    scale: 1.25;
+    }
+#btn:hover::before,
+#btn:hover::after {
+    opacity: 1;
+    scale: 1;
+    border-radius: 3px;
+    }
+#btn2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    margin: 15px;
+    background-image: 
+    linear-gradient(90deg,
+    #045991, #33ffbb);
+    width: 80px;
+    height: 40px;
+}   
+
+
+
+#div1{
+    text-align: center;
+    align-content: center;
+    padding: 5px;
+    height: 100%;
+}
+/* logo animation Anfang*/
+.gallery{
+    margin-top: 5px;
+    margin-left: 50%;
+    position: relative;
+    width: 200px;
+    height: 120px;
+    transform-style: preserve-3d;
+    animation: rotate 10s linear infinite;
+    }
+@keyframes rotate{
+    from{
+        transform:perspective(1200px) rotateY(0deg);
+    }
+    to{
+        transform:perspective(1200px) rotateY(360deg);
+    }
+}
+.gallery span{
+    position:absolute;
+    width: 70%;
+    height: 70%;
+    transform-origin:center;
+    transform-style:preserve-3d;
+    transform:rotateY(calc(var(--i) * 45deg)) translateZ(150px);
+    }
+.gallery span img{
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    }
+/* logo animation Ende*/
+@media screen and (Max-width: 900px) {
+    body{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        background-image: url(back2.jpg);
+        background-size: cover;
+        background-blend-mode: darken;
+        background-attachment: fixed;
+    }
+    h1{
+        font-weight: bold;
+        font-size: 20px;
+        color: darkcyan;
+    }
+    #sidebar{
+        list-style-type: none;
+        margin: 0;
+        padding-left: 25px;
+        padding-top: 10px;
+        width: 13%;
+        height: 100%;
+        border-right: black;
+        border-width: 8px;
+        position: fixed;
+    }
+    #logo{
+        margin-top: 10px;
+        margin-bottom: -13px;
+        width: 90px;
+        height: 90px;
+    }
+    #logo:hover{
+        transform:scale(1.4);
+    }
+    .aktiv{
+        color: rgb(137, 4, 79);
+    }
+    #btn {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 14px;
+        opacity: 80%;
+        margin-top: 5%;
+        position: relative;
+        display: inline-block;
+        width: 90px;
+        height: 30px;
+        background-image: 
+        linear-gradient(90deg,
+        #045991, #33ffbb);
+        color: black;
+        border: none;
+        cursor: pointer;
+        }
+    #btn::before,
+    #btn::after {
+        --size: calc(100% + 15px);
+        content: "";
+        position: absolute;
+        inset: 50% 0 0 50%;
+        translate: -50% -50%;
+        pointer-events: none;
+        transition: scale 0.35s;
+        }
+    #btn::before {
+        width: var(--size);
+        height: 100%;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        scale: .25 1;
+        }
+    #btn::after{
+        width: 100%;
+        height: var(--size);
+        border-right: 2px solid white;
+        border-left: 2px solid white;
+        scale: 1.25;
+        }
+    #btn:hover::before,
+    #btn:hover::after {
+        opacity: 1;
+        scale: 1;
+        border-radius: 3px;
+        }
+    #btn2{
+        font-family: 'Lucida Sans', 'Lucida         Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        background-image: 
+        linear-gradient(90deg,
+        #045991, #33ffbb);
+        width: 120px;
+        height: 40px;
+        margin: 5px;
+        }   
+    
+    #div1{
+        text-align: center;
+        align-content: center;
+        padding: 5px;
+        height: 100%;
+    }
+    /* logo animation Anfang*/
+    .gallery{
+        margin-top: 5px;
+        margin-left: 50%;
+        position: relative;
+        width: 180px;
+        height: 80px;
+        transform-style: preserve-3d;
+        animation: rotate 10s linear infinite;
+        }
+    @keyframes rotate{
+        from{
+            transform:perspective(1200px) rotateY(0deg);
+        }
+        to{
+            transform:perspective(1200px) rotateY(360deg);
+        }
+    }
+    .gallery span{
+        position:absolute;
+        width: 60%;
+        height: 60%;
+        transform-origin:center;
+        transform-style:preserve-3d;
+        transform:rotateY(calc(var(--i) * 45deg)) translateZ(150px);
+        }
+    .gallery span img{
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        object-fit: cover;
+        }   
+}
